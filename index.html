@@ -508,6 +508,87 @@
         </div>
       </div>
     </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2 data-i18n="login">Login</h2>
+        <form id="loginForm">
+          <label for="email" data-i18n="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <div class="error" id="emailError"></div>
+          <label for="password" data-i18n="password">Password</label>
+          <input type="password" id="password" name="password" required>
+          <div class="error" id="passwordError"></div>
+          <button id="submitButton" data-i18n="login" disabled>Login</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="registrationModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeRegistrationModal()">&times;</span>
+        <h2 data-i18n="register">Register</h2>
+        <form id="registrationForm">
+          <label for="firstName" data-i18n="firstName">First Name*</label>
+          <input type="text" id="firstName" name="firstName" required>
+          <div class="error" id="firstNameError"></div>
+
+          <label for="lastName" data-i18n="lastName">Last Name*</label>
+          <input type="text" id="lastName" name="lastName" required>
+          <div class="error" id="lastNameError"></div>
+
+          <label for="patronymic" data-i18n="patronymic">Patronymic (optional)</label>
+          <input type="text" id="patronymic" name="patronymic">
+          <div class="error" id="patronymicError"></div>
+
+          <label for="email" data-i18n="registration-email">Email*</label>
+          <input type="email" id="registration-email" name="email" required>
+          <div class="error" id="registration-emailError"></div>
+
+          <label for="phone" data-i18n="registration-phone">Phone Number*</label>
+          <input type="tel" id="phone" name="phone" pattern="\+375\d{9}" required placeholder="+375">
+          <div class="error" id="phoneError"></div>
+
+          <label for="birthDate" data-i18n="birthDate">Birth Date*</label>
+          <input type="date" id="birthDate" name="birthDate" required>
+          <div class="error" id="birthDateError"></div>
+
+          <label for="password" data-i18n="registration-password">Password*</label>
+          <input type="password" id="registration-password" name="password" required>
+          <div class="error" id="registration-passwordError"></div>
+
+          <label for="confirmPassword" data-i18n="confirmPassword">Confirm Password*</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required>
+          <div class="error" id="confirmPasswordError"></div>
+
+          <fieldset>
+            <legend data-i18n="roleSelection">Select Role*</legend>
+            <label for="role-customer">
+              <input type="radio" id="role-customer" name="role" value="customer" required>
+              <span data-i18n="customer">Customer</span>
+            </label>
+            <label for="role-seller">
+              <input type="radio" id="role-seller" name="role" value="seller" required>
+              <span data-i18n="seller">Seller</span>
+            </label>
+          </fieldset>
+          <div class="error" id="roleError"></div>
+
+          <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            <span data-i18n="terms">I agree to the terms of service</span>
+          </label>
+          <div class="error" id="termsError"></div>
+
+          <button id="registration-submitButton" data-i18n="register" disabled>Register</button>
+        </form>
+      </div>
+    </div>
+    <script src="js/login.js"></script>
+    <script src="js/registration.js"></script>
   </body>
 
 </html>
