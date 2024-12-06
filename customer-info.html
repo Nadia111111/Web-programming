@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Customer Info</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            .general-info-container {
+                max-width: 400px;
+                margin-top: 20px;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                color: var(--text-color);
+            }
+
+            .general-info-container h2 {
+                margin-bottom: 20px;
+            }
+
+            .back-button {
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color: #7fad39;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                width: 100%;
+            }
+
+            .back-button:hover {
+                background-color: #5a7b28;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header-upper">
+                <img id="light-logo" src="images/header/logo_light.png" alt="logo" />
+                <div class="header-info">
+                    <div class="email-info">
+                        <img src="images/header/email_icon.svg" alt="letter" />
+                        <a href="mailto:Hello@colorlib.com">Hello@colorlib.com</a>
+                    </div>
+                    <img src="images/header/separation_line.svg" alt="" />
+                    <p data-i18n="shipping">Free Shipping for all order of $99</p>
+                </div>
+                <div class="header-other">
+                    <div class="socials">
+                        <img src="images/header/facebook.svg" alt="facebook" />
+                        <img src="images/header/whatsapp.svg" alt="whatsapp" />
+                        <img src="images/header/linkedin.svg" alt="linkedin" />
+                        <img src="images/header/twitter.svg" alt="twitter" />
+                    </div>
+                    <button class="theme-button" id="theme-button" data-i18n="theme-button">Switch Theme</button>
+                    <div class="language" id="translate-button">
+                        <img class="language-flag" src="images/header/english_flag.png" alt="english flag" />
+                        <p data-i18n="language">English</p>
+                    </div>
+                    <img id="divider-1" src="images/header/separation_line.svg" alt="" />
+                    <div class="login" id="login-btn">
+                        <img src="images/header/login_icon.svg" alt="person" />
+                        <p data-i18n="login">Login</p>
+                    </div>
+                    <img id="divider-2" src="images/header/separation_line.svg" alt="" />
+                    <div class="register" id="register-btn">
+                        <img src="images/header/register_icon.svg" alt="add person" />
+                        <p data-i18n="register">Register</p>
+                    </div>
+                    <img id="divider-3" src="images/header/separation_line.svg" alt="" />
+                    <div class="profile" id="profile-btn">
+                        <img src="images/header/profile_icon.svg" alt="profile" />
+                        <p data-i18n="profile">Profile</p>
+                    </div>
+                    <img id="divider-4" src="images/header/separation_line.svg" alt="" />
+                    <div class="logout" id="logout-btn">
+                        <img src="images/header/logout_icon.svg" alt="logout" />
+                        <p data-i18n="logout">Logout</p>
+                    </div>
+                </div>
+                <div class="burger-menu" id="burger-menu">
+                    <div class="burger-icon">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="menu" id="menu">
+                        <ul>
+                            <li id="li-theme" data-i18n="theme-button">Switch Theme</li>
+                            <li id="li-language" data-i18n="li-language">Switch Language</li>
+                            <li id="li-login" data-i18n="login">Login</li>
+                            <li id="li-register" data-i18n="register">Register</li>
+                            <li id="li-profile" data-i18n="profile">Profile</li>
+                            <li id="li-logout" data-i18n="logout">Logout</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="general-info-container">
+                <h2 data-i18n="general-info-header-customer">Customer Information</h2>
+                <p data-i18n="general-info-p1-customer">Welcome to the Customer Info page!</p>
+                <p data-i18n="general-info-p2-customer">Here, customers can view details and updates specific to their account.</p>
+                <button data-i18n="back-to-profile-btn" class="back-button" onclick="goBack()">Back to Profile</button>
+            </div>
+        </main>
+        <script>
+            function goBack() {
+                window.location.href = "profile.html";
+            }
+        </script>
+        <script src="js/translate.js"></script>
+        <script src="js/themeSwitch.js"></script>
+        <script src="js/toggleMenu.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/registration.js"></script>
+        <script src="js/profile.js"></script>
+        <script src="js/logout.js"></script>
+    </body>
+
+</html>
